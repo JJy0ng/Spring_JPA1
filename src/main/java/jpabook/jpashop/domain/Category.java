@@ -21,7 +21,7 @@ public class Category {
     @JoinTable(name = "category_item",
             joinColumns = @JoinColumn(name = "category_id"), // 중간 테이블에 있는 id
             inverseJoinColumns = @JoinColumn(name = "item_id")) // 중간 테이블을 매핑 시켜줌
-    private List<Category> categories = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "parent_id")
