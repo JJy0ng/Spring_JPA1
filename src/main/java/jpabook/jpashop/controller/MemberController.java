@@ -47,5 +47,8 @@ public class MemberController {
         model.addAttribute("members", members);
         return "members/memberList";
 
+        //API를 만들 때 절대로 엔티티를 외부로 반환하면 안된다
+        //예를들어 필드에 비밀번호가 있다면 비밀번호가 노출이 된다
+        //API의 스펙이 변함
     }
 }
