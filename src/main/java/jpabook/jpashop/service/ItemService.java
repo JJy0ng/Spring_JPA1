@@ -21,11 +21,11 @@ public class ItemService {
     }
 
     @Transactional
-    public void updateItem(Long itemId, Book param){
+    public void updateItem(Long itemId, String name, int price, int stockQuantity){
         Item findItem = itemRepository.finOne(itemId); //영속상태
-        findItem.setPrice(param.getPrice());
-        findItem.setName(param.getName());
-        findItem.setStockQuantity(param.getStockQuantity());
+        findItem.setPrice(price);
+        findItem.setName(name);
+        findItem.setStockQuantity(stockQuantity);
     }
     public List<Item> findItems(){
         return  itemRepository.findAll();
